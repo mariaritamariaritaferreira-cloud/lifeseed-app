@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: lifeseed-app
+    env: docker
+    plan: free
+    region: oregon
+    healthCheckPath: /
+    autoDeploy: true
+    docker:
+      dockerfilePath: ./Dockerfile
+    envVars:
+      - key: APP_NAME
+        value: LifeSeed
+      - key: APP_URL
+        value: https://lifeseed-app.onrender.com
+      - key: DB_HOST
+        value: localhost
+      - key: DB_NAME
+        value: lifeseed
+      - key: DB_USER
+        value: root
+      - key: DB_PASS
+        sync: false

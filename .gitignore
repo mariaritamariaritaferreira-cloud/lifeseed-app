@@ -1,0 +1,8 @@
+# Ignorar arquivos locais de ambiente e temporários
+.env
+.env.local
+vendor/
+.DS_Store
+.idea/
+.vscode/
+*.log
